@@ -729,48 +729,90 @@
     </section>
 
     <!-- Form Section -->
-    <section id="contacto" class="form-section">
-        <div class="container">
-            <div class="form-container">
-                <h2>¿Listo para <span style="background: linear-gradient(135deg, #00E5FF, #0099ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Transformar</span> tu Negocio?</h2>
-                <p>Agendá un diagnóstico sin compromiso y descubrí cómo un Agente IA puede integrarse en tu operación</p>
-                <form id="leadForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                    <div class="form-group">
-                        <label for="nombre">Nombre completo *</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="telefono">Teléfono *</label>
-                        <input type="tel" id="telefono" name="telefono" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="empresa">Empresa</label>
-                        <input type="text" id="empresa" name="empresa">
-                    </div>
-                    <div class="form-group">
-                        <label for="industria">Industria *</label>
-                        <select id="industria" name="industria" required>
-                            <option value="">Selecciona una opción</option>
-                            <option value="distribuidor">Distribuidor/Mayorista</option>
-                            <option value="ecommerce">Ecommerce</option>
-                            <option value="hospitalidad">Hospitalidad</option>
-                            <option value="concesionaria">Concesionaria</option>
-                            <option value="otra">Otra</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="mensaje">¿Qué te gustaría automatizar?</label>
-                        <textarea id="mensaje" name="mensaje"></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Solicitar Diagnóstico Gratis</button>
-                </form>
-            </div>
+<section id="contacto" class="form-section">
+  <div class="container">
+    <div class="form-container">
+      <h2>¿Listo para <span style="background: linear-gradient(135deg, #00E5FF, #0099ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Transformar</span> tu Negocio?</h2>
+      <p>Agendá un diagnóstico sin compromiso y descubrí cómo un Agente IA puede integrarse en tu operación</p>
+
+      <!-- IMPORTANTE: ya no usamos action= ni method= en el form -->
+      <form id="leadForm">
+        <div class="form-group">
+          <label for="nombre">Nombre completo *</label>
+          <input type="text" id="nombre" name="nombre" required>
         </div>
-    </section>
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono *</label>
+          <input type="tel" id="telefono" name="telefono" required>
+        </div>
+        <div class="form-group">
+          <label for="empresa">Empresa</label>
+          <input type="text" id="empresa" name="empresa">
+        </div>
+        <div class="form-group">
+          <label for="industria">Industria *</label>
+          <select id="industria" name="industria" required>
+            <option value="">Selecciona una opción</option>
+            <option value="distribuidor">Distribuidor/Mayorista</option>
+            <option value="ecommerce">Ecommerce</option>
+            <option value="hospitalidad">Hospitalidad</option>
+            <option value="concesionaria">Concesionaria</option>
+            <option value="otra">Otra</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">¿Qué te gustaría automatizar?</label>
+          <textarea id="mensaje" name="mensaje"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Solicitar Diagnóstico Gratis</button>
+      </form>
+
+      <p id="form-status" style="margin-top:15px;color:#00e5ff;font-weight:bold;"></p>
+    </div>
+  </div>
+</section>
+
+<script>
+document.getElementById("leadForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const webhookURL = "https://services.leadconnectorhq.com/hooks/bAkWLSPJPDQwhRULy0Jo/webhook-trigger/56d12633-9a04-4521-b162-b12a9d1e0db8";
+
+  const data = {
+    nombre: document.getElementById("nombre").value,
+    email: document.getElementById("email").value,
+    telefono: document.getElementById("telefono").value,
+    empresa: document.getElementById("empresa").value,
+    industria: document.getElementById("industria").value,
+    mensaje: document.getElementById("mensaje").value
+  };
+
+  const statusElement = document.getElementById("form-status");
+  statusElement.innerText = "Enviando...";
+
+  try {
+    const response = await fetch(webhookURL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+
+    if (response.ok || response.status === 0) {
+      statusElement.innerText = "¡Formulario enviado con éxito!";
+      document.getElementById("leadForm").reset();
+    } else {
+      statusElement.innerText = "Error al enviar. Intenta nuevamente.";
+    }
+  } catch (error) {
+    statusElement.innerText = "Error de conexión. Intenta nuevamente.";
+  }
+});
+</script>
+
 
     <!-- Footer -->
     <footer>
