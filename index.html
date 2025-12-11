@@ -732,27 +732,36 @@
 <section id="contacto" class="form-section">
   <div class="container">
     <div class="form-container">
-      <h2>¿Listo para <span style="background: linear-gradient(135deg, #00E5FF, #0099ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Transformar</span> tu Negocio?</h2>
+      <h2>¿Listo para 
+        <span style="background: linear-gradient(135deg, #00E5FF, #0099ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+          Transformar
+        </span> 
+        tu Negocio?
+      </h2>
       <p>Agendá un diagnóstico sin compromiso y descubrí cómo un Agente IA puede integrarse en tu operación</p>
 
-      <!-- IMPORTANTE: ya no usamos action= ni method= en el form -->
+      <!-- FORMULARIO -->
       <form id="leadForm">
         <div class="form-group">
           <label for="nombre">Nombre completo *</label>
           <input type="text" id="nombre" name="nombre" required>
         </div>
+
         <div class="form-group">
           <label for="email">Email *</label>
           <input type="email" id="email" name="email" required>
         </div>
+
         <div class="form-group">
           <label for="telefono">Teléfono *</label>
           <input type="tel" id="telefono" name="telefono" required>
         </div>
+
         <div class="form-group">
           <label for="empresa">Empresa</label>
           <input type="text" id="empresa" name="empresa">
         </div>
+
         <div class="form-group">
           <label for="industria">Industria *</label>
           <select id="industria" name="industria" required>
@@ -764,18 +773,38 @@
             <option value="otra">Otra</option>
           </select>
         </div>
+
         <div class="form-group">
           <label for="mensaje">¿Qué te gustaría automatizar?</label>
           <textarea id="mensaje" name="mensaje"></textarea>
         </div>
-        <button type="submit" class="submit-btn">Solicitar Diagnóstico Gratis</button>
+
+        <!-- IMPORTANTE: ahora solo ENVÍA, no agenda -->
+        <button type="submit" class="submit-btn">Enviar</button>
       </form>
 
+      <!-- Mensaje de estado -->
       <p id="form-status" style="margin-top:15px;color:#00e5ff;font-weight:bold;"></p>
+
+      <!-- CALENDARIO (OCULTO HASTA QUE SE ENVÍA EL FORM) -->
+      <section id="calendar-section" style="display:none; margin-top:40px;">
+        <h2>Agendá tu Diagnóstico</h2>
+        <p>Elegí día y horario para tu reunión.</p>
+
+        <iframe 
+          src="https://api.leadconnectorhq.com/widget/booking/SMCCcUsn6LWhstOfftAD"
+          style="width:100%; min-height:700px; border:none;" 
+          frameborder="0"
+          scrolling="auto"
+          loading="lazy">
+        </iframe>
+      </section>
+
     </div>
   </div>
 </section>
 
+<!-- SCRIPT DEL FORMULARIO + CALENDARIO -->
 <script>
 document.getElementById("leadForm").addEventListener("submit", async function (e) {
   e.preventDefault();
@@ -802,8 +831,18 @@ document.getElementById("leadForm").addEventListener("submit", async function (e
     });
 
     if (response.ok || response.status === 0) {
-      statusElement.innerText = "¡Formulario enviado con éxito!";
-      document.getElementById("leadForm").reset();
+      statusElement.innerText = "¡Gracias! Tus datos fueron recibidos. Ahora agendá tu diagnóstico.";
+
+      // Ocultar el formulario
+      document.getElementById("leadForm").style.display = "none";
+
+      // Mostrar el calendario
+      const calendarSection = document.getElementById("calendar-section");
+      calendarSection.style.display = "block";
+
+      // Scroll suave hacia el calendario
+      calendarSection.scrollIntoView({ behavior: "smooth" });
+
     } else {
       statusElement.innerText = "Error al enviar. Intenta nuevamente.";
     }
