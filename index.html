@@ -295,7 +295,7 @@
     
 .industries-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
@@ -342,16 +342,6 @@
   line-height: 1.6;
 }
 
-/* =========================
-   FIX: center last card
-   when it's alone
-   ========================= */
-
-.industries-grid > .industry-card:last-child:nth-child(odd) {
-  grid-column: 1 / -1;
-  justify-self: center;
-  max-width: 560px;
-}
 
         /* Cases Section */
         .cases-grid {
@@ -709,7 +699,6 @@
                         <p>Respuestas precompra, devoluciones y recuperación de carritos</p>
                     </div>
                 </div>
-                <BR>
                 <div class="industry-card">
                     <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/81902285b8e51ac8f8e9fb132c329ea06835c93d/Images/industriasrestaurantes.png" alt="Hospitalidad" class="industry-image">
                     <div class="industry-content">
