@@ -4,31 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Meta Tags -->
-    <title>NeoMynd - Agentes IA para Escalar su Negocio</title>
-    <meta name="description" content="NeoMynd ofrece agentes de Inteligencia Artificial para aumentar ventas, reducir costos y automatizar la atención al cliente. Transforma tu negocio con IA.">
-    <meta name="keywords" content="Agentes IA, Inteligencia Artificial, Automatización, Escalar Negocio, NeoMynd, Ventas, Reducción de Costos, Distribuidores, Retail, Ecommerce, Hoteles, Restaurantes, Concesionarias, Leads, Test Drive">
+    <!-- SEO Básico -->
+    <title>Neomynd - Agentes IA para Escalar su Negocio</title>
+    <meta name="description" content="Neomynd ofrece agentes de inteligencia artificial para aumentar ventas, reducir costos y escalar tu negocio de manera eficiente.">
+    <meta name="keywords" content="IA, agentes inteligentes, automatización, ventas, eficiencia, negocio">
     <meta name="author" content="NeoMynd">
-
-    <!-- Open Graph / Social Sharing -->
-    <meta property="og:title" content="NeoMynd - Agentes IA para Escalar su Negocio">
-    <meta property="og:description" content="Transforma tu negocio con agentes IA de NeoMynd: más ventas, menos costos y automatización completa.">
+    
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:title" content="Neomynd - Agentes IA para Escalar su Negocio">
+    <meta property="og:description" content="Aumenta ventas, reduce costos y automatice su negocio con agentes IA de Neomynd.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/Isotipo_NeoMynd.png">
+    <meta property="og:image" content="Images/Isotipo_NeoMynd.png">
     <meta property="og:url" content="https://www.neomynd.tech">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="NeoMynd - Agentes IA para Escalar su Negocio">
-    <meta name="twitter:description" content="Transforma tu negocio con agentes IA de NeoMynd: más ventas, menos costos y automatización completa.">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/Isotipo_NeoMynd.png">
-
-    <!-- Fonts & Icons -->
+    
+    <!-- Favicon -->
+    <link rel="icon" href="Images/Isotipo_NeoMynd.png" type="image/png">
+    
+    <!-- Fuentes -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset básico */
+        * { margin:0; padding:0; box-sizing:border-box; font-family:'Montserrat', sans-serif; }
+        body { background:#0A1A3F; color:#fff; line-height:1.6; }
+        a { text-decoration:none; color:inherit; }
+        img { max-width:100%; height:auto; display:block; }
+
+        header { position:fixed; top:0; width:100%; background:#010619; padding:15px 0; z-index:1000; }
+        .container { max-width:1200px; margin:0 auto; padding:0 20px; }
+        nav { display:flex; justify-content:space-between; align-items:center; }
+        .logo { font-size:24px; font-weight:800; background:linear-gradient(135deg,#00E5FF,#0099ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; display:flex; align-items:center; gap:10px; }
+        .logo img { height:40px; }
+        .nav-links { display:flex; gap:25px; list-style:none; }
+        .nav-links a:hover { color:#00E5FF; }
+
+        /* Hero */
+        .hero { min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:120px 20px 80px; }
+        .hero h1 { font-size:48px; margin-bottom:20px; }
+        .hero h1 span { background:linear-gradient(135deg,#00E5FF,#0099ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+        .hero p { font-size:20px; color:#b8c5d6; margin-bottom:30px; }
+        .btn { padding:15px 35px; border-radius:50px; font-weight:700; cursor:pointer; display:inline-block; transition:all 0.3s; }
+        .btn-primary { background:linear-gradient(135deg,#00E5FF,#0099ff); color:#0A1A3F; }
+        .btn-primary:hover { transform:translateY(-3px); }
+        .btn-secondary { border:2px solid #00E5FF; color:#00E5FF; }
+        .btn-secondary:hover { background:#00E5FF; color:#0A1A3F; }
+
+        /* Sections */
+        section { padding:100px 20px; }
+        .section-alt { background:rgba(255,255,255,0.02); }
+        .section-title { font-size:36px; font-weight:800; text-align:center; margin-bottom:40px; }
+        .section-title span { background:linear-gradient(135deg,#00E5FF,#0099ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+        .section-subtitle { text-align:center; color:#b8c5d6; margin-bottom:50px; max-width:800px; margin-left:auto; margin-right:auto; }
+
+        /* Grid */
+        .grid { display:grid; gap:30px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); max-width:1200px; margin:0 auto; }
+
+        .card { background:rgba(255,255,255,0.05); border-radius:20px; padding:30px; text-align:center; transition:all 0.3s; }
+        .card:hover { transform:translateY(-10px); box-shadow:0 20px 40px rgba(0,229,255,0.2); }
+        .card h3 { color:#00E5FF; margin-bottom:15px; }
+        .card p { color:#b8c5d6; }
+
+        /* Footer */
+        footer { background:rgba(10,26,63,0.8); padding:60px 20px; text-align:center; }
+        .footer-logo { font-size:28px; font-weight:800; background:linear-gradient(135deg,#00E5FF,#0099ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:10px; }
+        .footer-tagline { color:#b8c5d6; margin-bottom:20px; }
+        .social-links a { color:#00E5FF; font-size:24px; margin:0 10px; transition:all 0.3s; }
+        .social-links a:hover { transform:scale(1.2); color:#fff; }
+
+        /* WhatsApp */
+        .whatsapp-float { position:fixed; bottom:30px; right:30px; width:60px; height:60px; background:#25D366; border-radius:50%; display:flex; justify-content:center; align-items:center; font-size:30px; color:#fff; text-decoration:none; transition:all 0.3s; }
+        .whatsapp-float:hover { transform:scale(1.1); }
+
+        /* Responsive */
+        @media(max-width:768px){ .hero h1{font-size:32px;} .hero p{font-size:16px;} .nav-links{display:none;} }
+    </style>
 </head>
 <body>
 
@@ -36,8 +88,7 @@
     <header>
         <nav class="container">
             <div class="logo">
-                <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/Isotipo_NeoMynd.png" alt="Logo NeoMynd">
-                NeoMynd - Future Intelligence, Today
+                <img src="Images/Isotipo_NeoMynd.png" alt="Neomynd"> NeoMynd
             </div>
             <ul class="nav-links">
                 <li><a href="#beneficios">Beneficios</a></li>
@@ -48,151 +99,93 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" role="banner">
-        <div class="hero-content fade-in">
+    <!-- Hero -->
+    <section class="hero">
+        <div>
             <h1>Agentes IA para <span>Escalar su Negocio</span></h1>
             <p>Más ventas. Menos costos. Más eficiencia.</p>
-            <div class="cta-buttons">
-                <a href="https://api.leadconnectorhq.com/widget/booking/SMCCcUsn6LWhstOfftAD" target="_blank" class="btn btn-primary">Agenda Diagnóstico</a>
-                <a href="#beneficios" class="btn btn-secondary">Más información</a>
+            <a href="#contacto" class="btn btn-primary">Agenda Diagnóstico</a>
+            <a href="#beneficios" class="btn btn-secondary">Más información</a>
+        </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section id="beneficios" class="section section-alt">
+        <h2 class="section-title">¿Por qué <span>Neomynd</span>?</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Aumenta tus ventas</h3>
+                <p>Respuesta instantánea 24/7 y seguimiento automático de leads</p>
+            </div>
+            <div class="card">
+                <h3>Reduce tus costes</h3>
+                <p>Menos horas de trabajo, menos errores operativos</p>
+            </div>
+            <div class="card">
+                <h3>Escala sin límites</h3>
+                <p>Capacidad infinita de atención e integración con tus sistemas</p>
+            </div>
+            <div class="card">
+                <h3>Omnicanal</h3>
+                <p>WhatsApp, web, redes sociales y email en una sola plataforma</p>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section id="beneficios" class="section section-alt" aria-labelledby="beneficios-title">
-        <h2 id="beneficios-title" class="section-title">¿Por qué <span>Neomynd</span>?</h2>
-        <p class="section-subtitle">Descubrí cómo nuestros agentes IA pueden transformar tu negocio</p>
-        <div class="benefits-grid">
-            <article class="benefit-card">
-                <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
-                <h3>Aumenta tus ventas</h3>
-                <p>Respuesta instantánea 24/7, seguimiento automático de leads y cotizaciones rápidas.</p>
-            </article>
-            <article class="benefit-card">
-                <div class="benefit-icon"><i class="fas fa-dollar-sign"></i></div>
-                <h3>Reduce tus costos</h3>
-                <p>Menos horas de trabajo, menos errores operativos y disminución de reclamaciones.</p>
-            </article>
-            <article class="benefit-card">
-                <div class="benefit-icon"><i class="fas fa-rocket"></i></div>
-                <h3>Escala sin límites</h3>
-                <p>Capacidad infinita de atención e integración con tus sistemas actuales.</p>
-            </article>
-            <article class="benefit-card">
-                <div class="benefit-icon"><i class="fas fa-comments"></i></div>
-                <h3>Omnicanal</h3>
-                <p>WhatsApp, web, redes sociales y email en una sola plataforma.</p>
-            </article>
+    <!-- Metodología -->
+    <section id="metodologia" class="section">
+        <h2 class="section-title">Nuestra <span>Metodología</span></h2>
+        <p class="section-subtitle">Proceso probado en 4 pasos</p>
+        <div class="grid">
+            <div class="card">
+                <h3>1. Diagnóstico</h3>
+                <p>Analizamos tu operación y oportunidades de automatización</p>
+            </div>
+            <div class="card">
+                <h3>2. Diseño</h3>
+                <p>Creamos un agente IA personalizado con flujos adaptados</p>
+            </div>
+            <div class="card">
+                <h3>3. Implementación</h3>
+                <p>Integramos el agente con tus sistemas actuales</p>
+            </div>
+            <div class="card">
+                <h3>4. Optimización</h3>
+                <p>Monitoreamos y mejoramos continuamente el rendimiento</p>
+            </div>
         </div>
     </section>
 
-    <!-- Methodology Section -->
-    <section id="metodologia" class="methodology" aria-labelledby="metodologia-title">
-        <h2 id="metodologia-title" class="section-title">Nuestra <span>Metodología</span> en 4 Pasos</h2>
-        <p class="section-subtitle">Un proceso probado para implementar IA en su negocio sin complicaciones</p>
-        <div class="methodology-steps">
-            <article class="step-card">
-                <div class="step-number">1</div>
-                <h3>Diagnóstico</h3>
-                <p>Analizamos tu operación actual, identificamos puntos de dolor y oportunidades de automatización.</p>
-            </article>
-            <article class="step-card">
-                <div class="step-number">2</div>
-                <h3>Diseño</h3>
-                <p>Creamos un agente IA personalizado con flujos conversacionales adaptados a su negocio.</p>
-            </article>
-            <article class="step-card">
-                <div class="step-number">3</div>
-                <h3>Implementación</h3>
-                <p>Integramos el agente con sus sistemas actuales (CRM, ERP, WhatsApp, web).</p>
-            </article>
-            <article class="step-card">
-                <div class="step-number">4</div>
-                <h3>Optimización</h3>
-                <p>Monitoreamos resultados, ajustamos y mejoramos continuamente el rendimiento.</p>
-            </article>
+    <!-- Industrias -->
+    <section id="industrias" class="section section-alt">
+        <h2 class="section-title">Industrias que <span>Servimos</span></h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Distribuidores & Mayoristas</h3>
+                <p>Automatización de consultas, pedidos, stock y cotizaciones</p>
+            </div>
+            <div class="card">
+                <h3>Ecommerce</h3>
+                <p>Respuestas precompra, devoluciones y recuperación de carritos</p>
+            </div>
+            <div class="card">
+                <h3>Hostelería</h3>
+                <p>Automatización de reservas y atención al huésped</p>
+            </div>
+            <div class="card">
+                <h3>Concesionarias</h3>
+                <p>Respuestas de modelos, financiación y agenda de test drives</p>
+            </div>
         </div>
     </section>
 
-    <!-- Industries Section -->
-    <section id="industrias" class="section" aria-labelledby="industrias-title">
-        <h2 id="industrias-title" class="section-title">Industrias que <span>Servimos</span></h2>
-        <div class="industries-grid">
-            <article class="industry-card">
-                <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/industriasdistribuidores.PNG" alt="Distribuidores y Mayoristas" class="industry-image">
-                <div class="industry-content">
-                    <h3>Distribuidores & Mayoristas</h3>
-                    <p>Automatización de consultas, pedidos, stock, cotizaciones y seguimiento.</p>
-                </div>
-            </article>
-            <article class="industry-card">
-                <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/industriasecommerce.PNG" alt="Ecommerce" class="industry-image">
-                <div class="industry-content">
-                    <h3>Ecommerce</h3>
-                    <p>Respuestas precompra, devoluciones y recuperación de carritos.</p>
-                </div>
-            </article>
-            <article class="industry-card">
-                <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/industriasrestaurantes.png" alt="Hostelería" class="industry-image">
-                <div class="industry-content">
-                    <h3>Hostelería</h3>
-                    <p>Automatización de reservas, consultas y atención al huésped.</p>
-                </div>
-            </article>
-            <article class="industry-card">
-                <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/concesionarias.png" alt="Concesionarias de autos" class="industry-image">
-                <div class="industry-content">
-                    <h3>Concesionarias de Autos</h3>
-                    <p>Respuestas de modelos, financiación, seguimiento de leads y agenda de test drive.</p>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <!-- Cases Section -->
-    <section id="casos" class="section section-alt" aria-labelledby="casos-title">
-        <h2 id="casos-title" class="section-title">Casos de <span>Impacto Real</span></h2>
-        <p class="section-subtitle">Resultados medibles en empresas que ya han confiado en nosotros</p>
-        <div class="cases-grid">
-            <article class="case-card">
-                <div class="case-stat">+40%</div>
-                <h3 class="case-label">Aumento en Ventas</h3>
-                <p class="case-description">Distribuidor mayorista ha aumentado conversión con respuestas instantáneas 24/7.</p>
-            </article>
-            <article class="case-card">
-                <div class="case-stat">-60%</div>
-                <h3 class="case-label">Reducción de Costes</h3>
-                <p class="case-description">Ecommerce ha reducido costos operativos automatizando su atención al cliente.</p>
-            </article>
-            <article class="case-card">
-                <div class="case-stat">3x</div>
-                <h3 class="case-label">Más Capacidad</h3>
-                <p class="case-description">Hotel ha triplicado capacidad de atención sin contratar personal adicional.</p>
-            </article>
-        </div>
-    </section>
-
-    <!-- Contact Form Section -->
-    <section id="contacto" class="form-section" aria-labelledby="contacto-title">
-        <h2 id="contacto-title">¿Listo para <span>Transformar</span> tu Negocio?</h2>
-        <p>Agenda un diagnóstico sin compromiso y descubre cómo un Agente IA puede integrarse en su operación</p>
-        <form id="leadForm">
-            <label for="nombre">Nombre completo *</label>
-            <input type="text" id="nombre" name="nombre" required>
-
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="telefono">Teléfono *</label>
-            <input type="tel" id="telefono" name="telefono" required>
-
-            <label for="empresa">Empresa</label>
-            <input type="text" id="empresa" name="empresa">
-
-            <label for="industria">Industria *</label>
-            <select id="industria" name="industria" required>
+    <!-- Contacto -->
+    <section id="contacto" class="section">
+        <h2 class="section-title">Contáctanos</h2>
+        <form action="Tu acelerador estratégico" method="POST" class="grid" style="max-width:600px;margin:0 auto;">
+            <input type="text" name="nombre" placeholder="Neomynd Tech *" required>
+            <input type="email" name="email" placeholder="contacto@neomynd.tech *" required>
+            <select name="Inteligencia Artificial" required>
                 <option value="">Selecciona una opción</option>
                 <option value="distribuidor">Distribuidor/Mayorista</option>
                 <option value="ecommerce">Ecommerce</option>
@@ -200,44 +193,25 @@
                 <option value="concesionaria">Concesionaria</option>
                 <option value="otra">Otra</option>
             </select>
-
-            <label for="mensaje">¿Qué te gustaría automatizar?</label>
-            <textarea id="mensaje" name="mensaje"></textarea>
-
-            <button type="submit" class="submit-btn">Enviar</button>
-            <p id="form-status"></p>
+            <textarea name="mensaje" placeholder="¿Qué te gustaría automatizar?"></textarea>
+            <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
-
-        <section id="calendar-section" style="display:none;">
-            <h2>Agenda un Diagnóstico</h2>
-            <iframe 
-                src="https://api.leadconnectorhq.com/widget/booking/SMCCcUsn6LWhstOfftAD"
-                style="width:100%; min-height:700px; border:none;" 
-                loading="lazy">
-            </iframe>
-        </section>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-logo">NeoMynd</div>
-            <p class="footer-tagline">Future Intelligence, Today</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/company/neomyndai" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/neomynd_tech" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/neomyndai" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-            </div>
-            <p class="copyright">© 2025 NeoMynd. Todos los derechos reservados.</p>
+        <div class="footer-logo">NeoMynd</div>
+        <p class="footer-tagline">Future Intelligence, Today</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/company/neomyndai/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/neomynd_tech" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/neomyndai" target="_blank"><i class="fab fa-facebook"></i></a>
         </div>
+        <p>© 2026 NeoMynd. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/5491133072057" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <!-- WhatsApp -->
+    <a href="https://wa.me/5491133072057" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
 </body>
 </html>
