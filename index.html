@@ -3,93 +3,614 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Básico -->
     <title>Neomynd - Agentes IA para Escalar su Negocio</title>
-    <meta name="description" content="Neomynd ofrece agentes de inteligencia artificial para aumentar ventas, reducir costos y escalar tu negocio de manera eficiente.">
-    <meta name="keywords" content="IA, agentes inteligentes, automatización, ventas, eficiencia, negocio">
-    <meta name="author" content="NeoMynd">
-    
-    <!-- Open Graph / Redes Sociales -->
-    <meta property="og:title" content="Neomynd - Agentes IA para Escalar su Negocio">
-    <meta property="og:description" content="Aumenta ventas, reduce costos y automatice su negocio con agentes IA de Neomynd.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="Images/Isotipo_NeoMynd.png">
-    <meta property="og:url" content="https://www.neomynd.tech">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="Images/Isotipo_NeoMynd.png" type="image/png">
-    
-    <!-- Fuentes -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
     <style>
-        /* Reset básico */
-        * { margin:0; padding:0; box-sizing:border-box; font-family:'Montserrat', sans-serif; }
-        body { background:#0A1A3F; color:#fff; line-height:1.6; }
-        a { text-decoration:none; color:inherit; }
-        img { max-width:100%; height:auto; display:block; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        header { position:fixed; top:0; width:100%; background:#010619; padding:15px 0; z-index:1000; }
-        .container { max-width:1200px; margin:0 auto; padding:0 20px; }
-        nav { display:flex; justify-content:space-between; align-items:center; }
-        .logo { font-size:24px; font-weight:800; background:linear-gradient(135deg,#00E5FF,#0099ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; display:flex; align-items:center; gap:10px; }
-        .logo img { height:40px; }
-        .nav-links { display:flex; gap:25px; list-style:none; }
-        .nav-links a:hover { color:#00E5FF; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #0A1A3F 0%, #1e3a8a 100%);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
 
-        /* Hero */
-        .hero { min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:120px 20px 80px; }
-        .hero h1 { font-size:48px; margin-bottom:20px; }
-        .hero h1 span { background:linear-gradient(135deg,#00E5FF,#0099ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
-        .hero p { font-size:20px; color:#b8c5d6; margin-bottom:30px; }
-        .btn { padding:15px 35px; border-radius:50px; font-weight:700; cursor:pointer; display:inline-block; transition:all 0.3s; }
-        .btn-primary { background:linear-gradient(135deg,#00E5FF,#0099ff); color:#0A1A3F; }
-        .btn-primary:hover { transform:translateY(-3px); }
-        .btn-secondary { border:2px solid #00E5FF; color:#00E5FF; }
-        .btn-secondary:hover { background:#00E5FF; color:#0A1A3F; }
+        header {
+            position: fixed;
+            top: 0;
+                        width: 100%;
+            background: #010619;
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 229, 255, 0.1);
+        }
 
-        /* Sections */
-        section { padding:100px 20px; }
-        .section-alt { background:rgba(255,255,255,0.02); }
-        .section-title { font-size:36px; font-weight:800; text-align:center; margin-bottom:40px; }
-        .section-title span { background:linear-gradient(135deg,#00E5FF,#0099ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
-        .section-subtitle { text-align:center; color:#b8c5d6; margin-bottom:50px; max-width:800px; margin-left:auto; margin-right:auto; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-        /* Grid */
-        .grid { display:grid; gap:30px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); max-width:1200px; margin:0 auto; }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-        .card { background:rgba(255,255,255,0.05); border-radius:20px; padding:30px; text-align:center; transition:all 0.3s; }
-        .card:hover { transform:translateY(-10px); box-shadow:0 20px 40px rgba(0,229,255,0.2); }
-        .card h3 { color:#00E5FF; margin-bottom:15px; }
-        .card p { color:#b8c5d6; }
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00E5FF, #0099ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-        /* Footer */
-        footer { background:rgba(10,26,63,0.8); padding:60px 20px; text-align:center; }
-        .footer-logo { font-size:28px; font-weight:800; background:linear-gradient(135deg,#00E5FF,#0099ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:10px; }
-        .footer-tagline { color:#b8c5d6; margin-bottom:20px; }
-        .social-links a { color:#00E5FF; font-size:24px; margin:0 10px; transition:all 0.3s; }
-        .social-links a:hover { transform:scale(1.2); color:#fff; }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
 
-        /* WhatsApp */
-        .whatsapp-float { position:fixed; bottom:30px; right:30px; width:60px; height:60px; background:#25D366; border-radius:50%; display:flex; justify-content:center; align-items:center; font-size:30px; color:#fff; text-decoration:none; transition:all 0.3s; }
-        .whatsapp-float:hover { transform:scale(1.1); }
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-        /* Responsive */
-        @media(max-width:768px){ .hero h1{font-size:32px;} .hero p{font-size:16px;} .nav-links{display:none;} }
+        .nav-links a:hover {
+            color: #00E5FF;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 20px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 229, 255, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -200px;
+            right: -200px;
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .hero-content {
+            max-width: 900px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, #00E5FF, #0099ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 40px;
+            color: #b8c5d6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00E5FF, #0099ff);
+            color: #0A1A3F;
+            box-shadow: 0 10px 30px rgba(0, 229, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 229, 255, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #00E5FF;
+            border: 2px solid #00E5FF;
+        }
+
+        .btn-secondary:hover {
+            background: #00E5FF;
+            color: #0A1A3F;
+        }
+
+        .section {
+            padding: 100px 20px;
+        }
+
+        .section-alt {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 60px;
+        }
+
+        .section-title span {
+            background: linear-gradient(135deg, #00E5FF, #0099ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 20px;
+            color: #b8c5d6;
+            max-width: 800px;
+            margin: -40px auto 60px;
+            line-height: 1.6;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 229, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            border-color: #00E5FF;
+            box-shadow: 0 20px 40px rgba(0, 229, 255, 0.2);
+        }
+
+        .benefit-icon {
+            font-size: 48px;
+            color: #00E5FF;
+            margin-bottom: 20px;
+        }
+
+        .benefit-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #00E5FF;
+        }
+
+        .benefit-card p {
+            color: #b8c5d6;
+            line-height: 1.6;
+        }
+
+        /* Metodología Section */
+        .methodology {
+            padding: 100px 20px;
+            background: rgba(0, 229, 255, 0.03);
+        }
+
+        .methodology-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .step-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(0, 229, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .step-card:hover {
+            transform: translateY(-10px);
+            border-color: #00E5FF;
+            box-shadow: 0 20px 40px rgba(0, 229, 255, 0.3);
+        }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #00E5FF, #0099ff);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #0A1A3F;
+            box-shadow: 0 5px 20px rgba(0, 229, 255, 0.4);
+        }
+
+        .step-card h3 {
+            font-size: 22px;
+            margin: 20px 0 15px;
+            color: #00E5FF;
+        }
+
+        .step-card p {
+            color: #b8c5d6;
+            line-height: 1.6;
+        }
+
+        /* Industries Section */
+    
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Card */
+.industry-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+/* Hover */
+.industry-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 229, 255, 0.3);
+}
+
+/* Image */
+.industry-image {
+  width: 100%;
+  height: 200px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Content */
+.industry-content {
+  padding: 30px;
+  text-align: center;
+}
+
+.industry-content h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #00E5FF;
+}
+
+.industry-content p {
+  color: #b8c5d6;
+  line-height: 1.6;
+}
+
+
+        /* Cases Section */
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .case-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 229, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px 30px;
+            transition: all 0.3s;
+        }
+
+        .case-card:hover {
+            transform: translateY(-10px);
+            border-color: #00E5FF;
+            box-shadow: 0 20px 40px rgba(0, 229, 255, 0.2);
+        }
+
+        .case-stat {
+            font-size: 48px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00E5FF, #0099ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .case-label {
+            font-size: 18px;
+            color: #00E5FF;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .case-description {
+            color: #b8c5d6;
+            line-height: 1.6;
+        }
+
+        /* Form Section */
+        .form-section {
+            padding: 100px 20px;
+            background: rgba(0, 229, 255, 0.05);
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(0, 229, 255, 0.3);
+            border-radius: 30px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0, 229, 255, 0.2);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .form-container p {
+            text-align: center;
+            color: #b8c5d6;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #00E5FF;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            border-radius: 10px;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #00E5FF;
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+
+     .logo {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              font-family: 'Segoe UI', sans-serif;
+              font-size: 1.2rem;
+              color: #010619;
+            }
+            .logo img {
+              height: 40px;
+            }
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            font-size: 18px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00E5FF, #0099ff);
+            color: #0A1A3F;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 229, 255, 0.5);
+        }
+
+        footer {
+            background: rgba(10, 26, 63, 0.8);
+            padding: 60px 20px 30px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 32px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00E5FF, #0099ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .footer-tagline {
+            color: #b8c5d6;
+            margin-bottom: 30px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .social-links a {
+            color: #00E5FF;
+            font-size: 24px;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+            color: #ffffff;
+        }
+
+        .copyright {
+            color: #b8c5d6;
+            font-size: 14px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(0, 229, 255, 0.2);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .form-container {
+                padding: 30px 20px;
+            }
+
+            .benefits-grid,
+            .industries-grid,
+            .methodology-steps,
+            .cases-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
     </style>
 </head>
 <body>
-
     <!-- Header -->
     <header>
-        <nav class="container">
-            <div class="logo">
-                <img src="Images/Isotipo_NeoMynd.png" alt="Neomynd"> NeoMynd
-            </div>
+
+
+        <nav class="container" style="background-color:#010619;" > 
+            <div class="logo"> <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/Isotipo_NeoMynd.png" alt="Neomynd" >
+                    NeoMynd - Future Intelligence, Today</div>
             <ul class="nav-links">
                 <li><a href="#beneficios">Beneficios</a></li>
                 <li><a href="#metodologia">Metodología</a></li>
@@ -99,119 +620,328 @@
         </nav>
     </header>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div>
+    <!-- Hero Section -->
+    <section class="hero" height=80 px>
+        <div class="hero-content fade-in">
             <h1>Agentes IA para <span>Escalar su Negocio</span></h1>
-            <p>Más ventas. Menos costos. Más eficiencia.</p>
-            <a href="#contacto" class="btn btn-primary">Agenda Diagnóstico</a>
-            <a href="#beneficios" class="btn btn-secondary">Más información</a>
+            <p>Más ventas.  Menos costos. Más eficiencia.</p>
+            <div class="cta-buttons">
+          <a href="https://api.leadconnectorhq.com/widget/booking/SMCCcUsn6LWhstOfftAD" 
+   target="_blank" 
+   class="btn btn-primary">
+   Agenda Diagnóstico
+</a>
+                <a href="#beneficios" class="btn btn-secondary"> Más información</a>
+            </div>
         </div>
     </section>
 
-    <!-- Beneficios -->
+    <!-- Benefits Section -->
     <section id="beneficios" class="section section-alt">
-        <h2 class="section-title">¿Por qué <span>Neomynd</span>?</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Aumenta tus ventas</h3>
-                <p>Respuesta instantánea 24/7 y seguimiento automático de leads</p>
-            </div>
-            <div class="card">
-                <h3>Reduce tus costes</h3>
-                <p>Menos horas de trabajo, menos errores operativos</p>
-            </div>
-            <div class="card">
-                <h3>Escala sin límites</h3>
-                <p>Capacidad infinita de atención e integración con tus sistemas</p>
-            </div>
-            <div class="card">
-                <h3>Omnicanal</h3>
-                <p>WhatsApp, web, redes sociales y email en una sola plataforma</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Metodología -->
-    <section id="metodologia" class="section">
-        <h2 class="section-title">Nuestra <span>Metodología</span></h2>
-        <p class="section-subtitle">Proceso probado en 4 pasos</p>
-        <div class="grid">
-            <div class="card">
-                <h3>1. Diagnóstico</h3>
-                <p>Analizamos tu operación y oportunidades de automatización</p>
-            </div>
-            <div class="card">
-                <h3>2. Diseño</h3>
-                <p>Creamos un agente IA personalizado con flujos adaptados</p>
-            </div>
-            <div class="card">
-                <h3>3. Implementación</h3>
-                <p>Integramos el agente con tus sistemas actuales</p>
-            </div>
-            <div class="card">
-                <h3>4. Optimización</h3>
-                <p>Monitoreamos y mejoramos continuamente el rendimiento</p>
+        <div class="container">
+            <h2 class="section-title">¿Por qué <span>Neomynd</span>?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Aumenta tus ventas</h3>
+                    <p>Respuesta instantánea 24/7, seguimiento automático de leads y cotizaciones rápidas</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <h3>Reduce tus costes</h3>
+                    <p>Menos horas de trabajo, menos errores operativos y disminución de reclamaciones</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Escala sin límites</h3>
+                    <p>Capacidad infinita de atención e integración con tus sistemas actuales</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Omnicanal</h3>
+                    <p>WhatsApp, web, redes sociales y email en una sola plataforma</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Industrias -->
-    <section id="industrias" class="section section-alt">
-        <h2 class="section-title">Industrias que <span>Servimos</span></h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Distribuidores & Mayoristas</h3>
-                <p>Automatización de consultas, pedidos, stock y cotizaciones</p>
-            </div>
-            <div class="card">
-                <h3>Ecommerce</h3>
-                <p>Respuestas precompra, devoluciones y recuperación de carritos</p>
-            </div>
-            <div class="card">
-                <h3>Hostelería</h3>
-                <p>Automatización de reservas y atención al huésped</p>
-            </div>
-            <div class="card">
-                <h3>Concesionarias</h3>
-                <p>Respuestas de modelos, financiación y agenda de test drives</p>
+    <!-- Methodology Section -->
+    <section id="metodologia" class="methodology">
+        <div class="container">
+            <h2 class="section-title">Nuestra <span>Metodología</span> en 4 Pasos</h2>
+            <p class="section-subtitle">Un proceso probado para implementar IA en su negocio sin complicaciones</p>
+            <div class="methodology-steps">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Diagnóstico</h3>
+                    <p>Analizamos tu operación actual, identificamos puntos de dolor y oportunidades de automatización</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Diseño</h3>
+                    <p>Creamos un agente IA personalizado con flujos conversacionales adaptados a su negocio</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Implementación</h3>
+                    <p>Integramos el agente con sus sistemas actuales (CRM, ERP, WhatsApp, web)</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Optimización</h3>
+                    <p>Monitoreamos resultados, ajustamos y mejoramos continuamente el rendimiento</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contacto -->
-    <section id="contacto" class="section">
-        <h2 class="section-title">Contáctanos</h2>
-        <form action="Tu acelerador estratégico" method="POST" class="grid" style="max-width:600px;margin:0 auto;">
-            <input type="text" name="nombre" placeholder="Neomynd Tech *" required>
-            <input type="email" name="email" placeholder="contacto@neomynd.tech *" required>
-            <select name="Inteligencia Artificial" required>
-                <option value="">Selecciona una opción</option>
-                <option value="distribuidor">Distribuidor/Mayorista</option>
-                <option value="ecommerce">Ecommerce</option>
-                <option value="hostelería">Hostelería</option>
-                <option value="concesionaria">Concesionaria</option>
-                <option value="otra">Otra</option>
-            </select>
-            <textarea name="mensaje" placeholder="¿Qué te gustaría automatizar?"></textarea>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
+    <!-- Industries Section -->
+    <section id="industrias" class="section">
+        <div class="container">
+            <h2 class="section-title">Industrias que <span>Servimos</span></h2>
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/industriasdistribuidores.PNG" alt="Distribuidores" class="industry-image">
+                    <div class="industry-content">
+                        <h3>Distribuidores & Mayoristas</h3>
+                        <p>Automatización de consultas, pedidos, stock, cotizaciones y seguimiento</p>
+                    </div>
+                </div>
+                <div class="industry-card">
+                    <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/industriasecommerce.PNG" alt="Ecommerce" class="industry-image">
+                    <div class="industry-content">
+                        <h3>Ecommerce</h3>
+                        <p>Respuestas precompra, devoluciones y recuperación de carritos</p>
+                    </div>
+                </div>
+                <div class="industry-card">
+                    <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/industriasrestaurantes.png" alt="Hostelería" class="industry-image">
+                    <div class="industry-content">
+                        <h3>Hostelería </h3>
+                        <p>Automatización de reservas, consultas y atención al huésped. Consulta de carta, alérgenos y dietas.</p>
+                    </div>
+                </div>
+                <div class="industry-card">
+                    <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/concesionarias.png" alt="Concesionarias" class="industry-image">
+                    <div class="industry-content">
+                        <h3>Concesionarias de Autos</h3>
+                        <p>Respuestas de modelos, financiación, seguimiento de leads y agenda citas de Test Drive.</p>
+                    </div>
+               </div>
+        </div>
     </section>
+
+    <!-- Cases Section -->
+    <section id="casos" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Casos de <span>Impacto Real</span></h2>
+            <p class="section-subtitle">Resultados medibles en empresas que ya han confiado en nosotros</p>
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-stat">+40%</div>
+                    <div class="case-label">Aumento en Ventas</div>
+                    <p class="case-description">Distribuidor mayorista ha aumentado conversión con respuestas instantáneas 24/7</p>
+                </div>
+                <div class="case-card">
+                    <div class="case-stat">-60%</div>
+                    <div class="case-label">Reducción de Costes</div>
+                    <p class="case-description">Ecommerce ha reducido costos operativos automatizando su atención al cliente</p>
+                </div>
+                <div class="case-card">
+                    <div class="case-stat">3x</div>
+                    <div class="case-label">Más Capacidad</div>
+                    <p class="case-description">Hotel ha triplicado capacidad de atención sin contratar personal adicional</p>
+                </div>
+            </div>
+        </div>
+        </div> <class="cases-grid">
+    </div> <class="container">
+
+    </section>
+
+    <!-- Form Section -->
+<section id="contacto" class="form-section">
+  <div class="container">
+    <div class="form-container">
+      <h2>¿Listo para 
+        <span style="background: linear-gradient(135deg, #00E5FF, #0099ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+          Transformar
+        </span> 
+        tu Negocio?
+      </h2>
+      <p>Agenda un diagnóstico sin compromiso y descubre cómo un Agente IA puede integrarse en su operación</p>
+
+      <!-- FORMULARIO -->
+      <form id="leadForm">
+        <div class="form-group">
+          <label for="nombre">Nombre completo *</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="telefono">Teléfono *</label>
+          <input type="tel" id="telefono" name="telefono" required>
+        </div>
+
+        <div class="form-group">
+          <label for="empresa">Empresa</label>
+          <input type="text" id="empresa" name="empresa">
+        </div>
+
+        <div class="form-group">
+          <label for="industria">Industria *</label>
+          <select id="industria" name="industria" required>
+             <option value="Selecciona una opción" style="background-color:#4d4d4d;">Selecciona una opción</option>
+             <option value="distribuidor" style="background-color:#4d4d4d;">Distribuidor/Mayorista</option>
+              <option value="ecommerce" style="background-color:#4d4d4d;">Ecommerce</option>
+              <option value="hostelería" style="background-color:#4d4d4d;">Hostelería</option>
+              <option value="concesionaria" style="background-color:#4d4d4d;">Concesionaria</option>
+              <option value="otra" style="background-color:#4d4d4d;">Otra</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="mensaje">¿Qué te gustaría automatizar?</label>
+          <textarea id="mensaje" name="mensaje"></textarea>
+        </div>
+
+        <!-- IMPORTANTE: ahora solo ENVÍA, no agenda -->
+        <button type="submit" class="submit-btn">Enviar</button>
+      </form>
+
+      <!-- Mensaje de estado -->
+      <p id="form-status" style="margin-top:15px;color:#00e5ff;font-weight:bold;"></p>
+
+      <!-- CALENDARIO (OCULTO HASTA QUE SE ENVÍA EL FORM) -->
+      <section id="calendar-section" style="display:none; margin-top:40px;">
+        <h2>Agenda un Diagnóstico</h2>
+        <p>Elige día y horario para nuestra reunión.</p>
+
+        <iframe 
+          src="https://api.leadconnectorhq.com/widget/booking/SMCCcUsn6LWhstOfftAD"
+          style="width:100%; min-height:700px; border:none;" 
+          frameborder="0"
+          scrolling="auto"
+          loading="lazy">
+        </iframe>
+      </section>
+
+    </div>
+  </div>
+</section>
+
+<!-- SCRIPT DEL FORMULARIO + CALENDARIO -->
+<script>
+document.getElementById("leadForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const webhookURL = "https://services.leadconnectorhq.com/hooks/bAkWLSPJPDQwhRULy0Jo/webhook-trigger/56d12633-9a04-4521-b162-b12a9d1e0db8";
+
+  const data = {
+    nombre: document.getElementById("nombre").value,
+    email: document.getElementById("email").value,
+    telefono: document.getElementById("telefono").value,
+    empresa: document.getElementById("empresa").value,
+    industria: document.getElementById("industria").value,
+    mensaje: document.getElementById("mensaje").value
+  };
+
+  const statusElement = document.getElementById("form-status");
+  statusElement.innerText = "Enviando...";
+
+  try {
+    const response = await fetch(webhookURL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+
+    if (response.ok || response.status === 0) {
+      statusElement.innerText = "¡Gracias! Sus datos han sido recibidos. Ahora agenda un diagnóstico.";
+
+      // Ocultar el formulario
+      document.getElementById("leadForm").style.display = "none";
+
+      // Mostrar el calendario
+      const calendarSection = document.getElementById("calendar-section");
+      calendarSection.style.display = "block";
+
+      // Scroll suave hacia el calendario
+      calendarSection.scrollIntoView({ behavior: "smooth" });
+
+    } else {
+      statusElement.innerText = "Error al enviar. Intenta nuevamente.";
+    }
+  } catch (error) {
+    statusElement.innerText = "Error de conexión. Intenta nuevamente.";
+  }
+});
+</script>
+
 
     <!-- Footer -->
     <footer>
-        <div class="footer-logo">NeoMynd</div>
-        <p class="footer-tagline">Future Intelligence, Today</p>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/company/neomyndai/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/neomynd_tech" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/neomyndai" target="_blank"><i class="fab fa-facebook"></i></a>
+        <div class="footer-content">
+            <div class="footer-logo">NeoMynd</div>
+            <p class="footer-tagline">Future Intelligence, Today</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/neomyndai/?viewAsMember=true" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/neomynd_tech" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/neomyndai" target="_blank"><i class="fab fa-facebook"></i></a>
+               
+            </div>
+            <p class="copyright">© 2025 NeoMynd. Todos los derechos reservados.</p>
         </div>
-        <p>© 2026 NeoMynd. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- WhatsApp -->
-    <a href="https://wa.me/5491133072057" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+    <!-- WhatsApp Float Button -->
 
+    <a href="https://wa.me/5491133072057" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.8s ease-out';
+                }
+            });
+        }, observerOptions);
+
+ 
+
+
+
+        
+        document.querySelectorAll('.benefit-card, .industry-card, .step-card, .case-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
+
