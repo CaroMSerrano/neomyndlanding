@@ -157,13 +157,25 @@
             border: 2px solid #00E5FF;
         }
 
-        .btn-pequeno        {
-            background: transparent;
-            color: #00E5FF;
-            border: 2px solid #00E5FF;
-            padding: 5px 8px;
-            justify-content: right;
-        }
+      .btn-pequeno {
+  background: transparent;
+  color: #00E5FF;
+  border: 2px solid #00E5FF;
+  padding: 6px 14px;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.btn-pequeno:hover {
+  background: #00E5FF;
+  color: #0A1A3F;
+  transform: scale(1.15);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.6);
+}
 
         .btn-secondary:hover {
             background: #00E5FF;
@@ -349,7 +361,11 @@
   color: #b8c5d6;
   line-height: 1.6;
 }
-
+.industry-action {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
 
         /* Cases Section */
         .cases-grid {
@@ -704,22 +720,16 @@
     </section>
 
     <!-- Industries Section -->
-    <section id="industrias" class="section">
-        <div class="container">
-            <h2 class="section-title">Industrias que <span>Servimos</span></h2>
-            <div class="industries-grid">
-                <div class="industry-card">
-                    <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/industriasdistribuidores.PNG" alt="Distribuidores" class="industry-image">
-                    <div class="industry-content">
-                        <h3>Distribuidores & Mayoristas</h3>
-                        <p>Automatización de consultas, pedidos, stock, cotizaciones y seguimiento</p>
-                         <div class="cta-buttons">
-                           <a href="https://distribuidores.neomynd.tech" 
-                           target="_blank" 
-                           class="btn btn-pequeno">+
-                            </a>
-                            </div>
-                    </div>
+                <div class="industry-content">
+                  <h3>Distribuidores & Mayoristas</h3>
+                  <p>Automatización de consultas, pedidos, stock, cotizaciones y seguimiento</p>
+                
+                          <div class="industry-action">
+                            <a href="https://distribuidores.neomynd.tech"
+                               target="_blank"
+                               class="btn btn-pequeno">+</a>
+                          </div>
+              
                 </div>
                 <div class="industry-card">
                     <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/industriasecommerce.PNG" alt="Ecommerce" class="industry-image">
